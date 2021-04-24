@@ -6,7 +6,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Our mappings are published in an OSS fashion and can be used inside of other mapping systems.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
-twitter_username: ParchmentMC
+twitter_username: mc_parchment
 github_username:  ParchmentMC
 
 # Build settings
