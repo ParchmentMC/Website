@@ -1,0 +1,49 @@
+title: ParchmentMC
+email: website@parchmentmc.org
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to the official homepage of ParchmentMC.
+  We build an extension to the official MojMap mappings, which contains parameter mappings and documentation of classes, methods, fields and obviously parameters.
+  Our mappings are published in an OSS fashion and can be used inside of other mapping systems.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""
+twitter_username: ParchmentMC
+github_username:  ParchmentMC
+
+# Build settings
+theme: jekyll-yamt
+
+#Plugins
+plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap]
+
+#Pagination
+paginate: 3
+paginate_path: "/page:num/"
+
+#SEO
+twitter:
+  username: ParchmentMC
+  card: summary
+logo: /assets/img/logo.jpg
+social:
+  links: #List your social links here
+    - https://twitter.com/ParchmentMC
+    - https://www.github.com/ParchmentMC
+lang: en_US
+
+#Highlighter
+kramdown:
+  input:          GFM
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+#Sass
+sass:
+  style: compressed
+  sourcemap: never

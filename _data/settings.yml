@@ -1,0 +1,35 @@
+#Subtitle
+subtitle:
+  active: true
+  text: An extension to the official MojMaps containing parameter mappigns and documentation.
+
+#Nav
+nav:
+  pages:
+    active: true
+  social:
+    active: true
+
+#Featured images in homepage
+featured-img:
+  active: false
+
+#Show categories at the end of posts
+categories:
+  active: true
+
+#Show date and read time under the post title
+date-under-post:
+  active: true
+
+#Use MathJAX
+mathjax:
+  active: true
+
+#Show related posts based on categories
+related-posts:
+  active: true
+  title: "You May Also Enjoy"
+
+#Comments
+comments: true
