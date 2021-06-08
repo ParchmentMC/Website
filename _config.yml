@@ -23,7 +23,7 @@ paginate_path: "/page:num/"
 twitter:
   username: ParchmentMC
   card: summary
-logo: /assets/img/logo.jpg
+logo: /assets/img/logo.png
 social:
   links: #List your social links here
     - https://twitter.com/ParchmentMC

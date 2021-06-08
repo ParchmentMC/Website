@@ -1,7 +1,7 @@
 #Subtitle
 subtitle:
   active: true
-  text: An extension to the official MojMaps containing parameter mappigns and documentation.
+  text: An extension to the official MojMaps containing parameter mappings and documentation.
 
 #Nav
 nav:
@@ -12,7 +12,7 @@ nav:
 
 #Featured images in homepage
 featured-img:
-  active: false
+  active: true
 
 #Show categories at the end of posts
 categories:
@@ -28,7 +28,7 @@ mathjax:
 
 #Show related posts based on categories
 related-posts:
-  active: true
+  active: false
   title: "You May Also Enjoy"
 
 #Comments
