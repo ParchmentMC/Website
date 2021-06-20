@@ -1,7 +1,7 @@
 #Subtitle
 subtitle:
   active: true
-  text: An extension to the official MojMaps containing parameter mappings and documentation.
+  text: Open community-sourced parameter names and javadocs.
 
 #Nav
 nav:

@@ -8,6 +8,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 twitter_username: mc_parchment
 github_username:  ParchmentMC
+author:
+  name: ParchmentMC
 
 # Build settings
 theme: jekyll-yamt
@@ -32,7 +34,7 @@ lang: en_US
 
 #Highlighter
 kramdown:
-  input:          GFM
+  input: GFM
   syntax_highlighter: rouge
 
   syntax_highlighter_opts:
@@ -47,3 +49,7 @@ kramdown:
 sass:
   style: compressed
   sourcemap: never
+
+# Collections
+collections:
+ - team_members # ParchmentMC team members
