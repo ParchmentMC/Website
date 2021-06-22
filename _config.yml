@@ -13,7 +13,7 @@ author:
 theme: jekyll-yamt
 
 #Plugins
-plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap]
+plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap, jekyll-redirect-from]
 
 #Pagination
 paginate: 3
