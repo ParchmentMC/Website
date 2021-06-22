@@ -9,29 +9,38 @@ title: About
 
 <style>
 .team-container {
-  margin: 1em;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1em;
-  row-gap: 1em;
+  margin: 1em auto;
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* column-gap: 1em; */
+  /* row-gap: 1em; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
   text-align: center;
 }
 
+.team-container .member {
+  margin: 0.25em;
+}
+
 .team-container .avatar {
-  width: 100%;
+  width: 7em;
+  height: 7em;
   border: 2px solid black;
   border-radius: 100%;
 }
 
 .team-container .name {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.0em;
 }
 
 .team-container .role {
   font-weight: 500;
   text-decoration: underline;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .team-container .teams {
@@ -39,6 +48,7 @@ title: About
   font-size: 0.8em;
 }
 
+@media (max-width)
 </style>
 
 <div class="team-container">
