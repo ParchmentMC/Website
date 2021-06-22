@@ -1,9 +1,7 @@
 title: ParchmentMC
 email: website@parchmentmc.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the official homepage of ParchmentMC.
-  We build an extension to the official MojMap mappings, which contains parameter mappings and documentation of classes, methods, fields and obviously parameters.
-  Our mappings are published in an OSS fashion and can be used inside of other mapping systems.
+  Open community-sourced parameter names and javadocs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 twitter_username: mc_parchment
