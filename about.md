@@ -23,6 +23,7 @@ title: About
 
 .team-container .member {
   margin: 0.25em;
+  flex: 1 0 8.1em;
 }
 
 .team-container .avatar {
