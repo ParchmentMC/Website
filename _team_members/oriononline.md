@@ -1,6 +1,6 @@
 ---
 name: OrionOnline
 role: System Admin
-teams: Mappings, Toolchain
+teams: Toolchain
 github: OrionDevelopment
 ---

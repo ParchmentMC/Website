@@ -1,5 +1,5 @@
 ---
 name: AlcatrazEscapee
-teams: Mappings, Standards
+teams: Standards
 github: AlcatrazEscapee
 ---

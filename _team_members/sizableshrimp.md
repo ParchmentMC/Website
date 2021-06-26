@@ -1,5 +1,5 @@
 ---
 name: SizableShrimp
-teams: Mappings, Standards
+teams: Standards
 github: SizableShrimp
 ---
