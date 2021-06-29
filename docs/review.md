@@ -72,6 +72,14 @@ Pull Requests must abide by these requirements:
   conversations and no change requesting reviews. One (1) approving review must be from a member of the reviewers 
   subteam.
 
+    - If all review comments of a change requesting review from a member of the reviewers subteam have been resolved, 
+      and more than five (5) days have passed since the resolution of these review comments, then the review may be 
+      dismissed as being outdated.
+
+      This prevents situations where a reviewer requests changes on a PR then becomes unable to rereview the PR for an 
+      extended period of time, which blocks the PR from being considered for merging (as a change requesting review is
+      present on the PR from a member of the reviewers subteam).
+
 - <span class="fa-li"><i class="fas fa-hourglass-start"></i> </span>
   After a PR has passed the review requirements above, a waiting period of at least forty-eight (48) hours for any 
   further comments or reviews will begin.
