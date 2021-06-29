@@ -45,7 +45,7 @@ As a general standard, use American English spelling for words. For example, pre
     - {:.small-text} _Examples:_ `BlockPos adjacentPos, BlockPos currentPos`, not `BlockPos pos1, BlockPos pos2`
 
 1. **Avoid abbreivations or acronyms.**
-    - _Exception:_ Common or well-known abbreviations can be used: `IO` (input-output), `NBT` ([named binary tag][nbt])
+    - _Exception:_ Common or well-known abbreviations can be used: `IO` (input-output), `Id` (identifier)
     - _Exception:_ Names for common classes can be shortened: `BlockPos pos`, `BlockState state`, `WorldGenLevel level`
 
 > **Note about lambda parameters:**
@@ -117,4 +117,3 @@ their corresponding fields.
       is moved, refactored, or deleted.
 
 *[mojmap]: portmanteau of 'Mojang' and 'mappings'
-[nbt]: https://minecraft.fandom.com/wiki/NBT_format
