@@ -3,53 +3,118 @@ layout: page
 title: Mapping Standards
 ---
 
+<style>
+.small-text {
+    list-style: none;
+    font-size: 0.9em !important;
+}
+.list-separation > li {
+    margin-bottom: 0.5em;
+}
+</style>
+
 # Mapping Standards
 
-This document details the standards that all contributions to Parchment mappings must follow.
+To ensure consistency for the Parchment mapping data, both to the benefit of reviewers and to consumers of the mappings,
+this page shows the mapping standards and guidelines. These standards are the basis used by reviewers when checking
+contributions.
 
-### Parameter Names
+The Parchment mapping set is based off of the names provided by the obfuscation maps that Mojang publishes for all 
+versions since 1.14. These names are referred to by Parchment as **'official'** names, **'Mojang'** names, or 
+**'mojmap'** names, in contrast to the _'obfuscated'_ names found in the client and server JARs.
 
-1. Use American English for spellings
-    - Example: `color`, not `colour`, `armor`, not `armour`
-1. Names should make sense and be valid java identifiers NOT reserved keywords as such:
-    - Example: `float` is NOT valid as it is a reserved keyword.
-1. Parameter names may be named based on the types, and the context in which they are used. They should be verbose and use complete words - do not omit essential information for brevity's sake.
-    - Example: `BlockPos adjacentPos, BlockPos currentPos`, not `BlockPos pos1, BlockPos pos2`
-1. Avoid single letters, or abbreviations.
-    - Example: `northWest` over `nW`, `matrixStack` over `mStack`. 
-    - Exception: common abbreviations can be used: `IO` / `NBT`, etc.
-    - Exception: common class / parameter names can be shortened: `BlockPos pos, BlockState state, WorldGenLevel level`
-1. Use Lower Camel Case.
-    - Example: `lowerCamelCase`
-3. Do not use `$` or `_` in variable names
-4. All parameters should match the regex `[a-z][A-Za-z0-9]*`.
-    - Simply, parameters should contain only alphanumeric characters and start with a lowercase letter.
-    - Example: `dot`, `pos`, `blockState`
-5. Favor using Mojang / Mojmap class names over <1.17 MCP classes to name parameters. In general, the mojmap name is the de-facto standard.
-    - Example: Use `level` over `world`, `blockEntity` over `tileEntity`
-    - Exception: If a Mojmap name would otherwise break a previous rule (i.e. `setColour(int)`, which would imply a parameter of `colour`, is not American English)
+As a general standard, use American English spelling for words. For example, prefer `color` to `colour`, or `armor` to
+`armour`.
 
+## Parameter Names
 
-A note about lambda parameters: They can, and will conflict with both existing variables, other methods, and other lambdas. Care should be taken to review these, until such a time that an automated and/or testable solution is in place to verify that these cannot conflict.  
+{:.list-separation}
 
-### Javadocs
+1. **Names must only contain alphanumeric characters, and must begin with a lowercase letter.**
+    - Alphanumeric characters means the characters in the ranges `A-Z`, `a-z`, and `0-9`.
+    - {:.small-text} _Examples:_ `someVariable`, not `delta%` or `Delta`
 
-Prioritization:
+1. **Names must be in lower camel case.**
+    - Lower camel case is written by joining together words and capitalizing the first character of each word except 
+      the first.
+    - {:.small-text} _Examples:_ `lowerCamelCase`, `areaTransformer`, `generatedItem`
 
-- Prioritize documenting public APIs over private fields and methods.
-- Prioritize methods and parameters, important fields, and classes.
-- Follow the principle of least effort for best payoff!
-- Do not document `package-info.java`.
+1. **Names should be named based on the parameter types and context of use.**
+    - They should be verbose and use complete words. Avoid omitting essential information for the purpose of keeping the 
+      name compact.
+    - {:.small-text} _Examples:_ `BlockPos adjacentPos, BlockPos currentPos`, not `BlockPos pos1, BlockPos pos2`
 
-Content:
+1. **Avoid abbreivations or acronyms.**
+    - _Exception:_ Common or well-known abbreviations can be used: `IO` (input-output), `NBT` ([named binary tag][nbt])
+    - _Exception:_ Names for common classes can be shortened: `BlockPos pos`, `BlockState state`, `WorldGenLevel level`
 
-1. Fully qualified mojmap class names should be used in javadoc tags that resolve their content, aka `@link` and `@see`.
-    - Example: `{@link net.minecraft.math.BlockPos}` instead of `{@link BlockPos}`
-2. Javadocs should be informative - there is no explicit restrictions as long as it is useful.
-3. Avoid overly simple explanations, or “expected knowledge”:
-    - Example: `getWorld() // Gets the world, @return the world`. This not a useful contribution.
-    - Example: `BlockPos() {} // This is the constructor for the class BlockPos` This is expected knowledge - javadocs should not be used to document Java itself.
-4. You can use the `@return` tag in a javadoc.
-5. Do not use `@param` tags directly in method javadocs, use the parameter javadocs instead.
-6. Do not use `@author` or `@since` tags in javadocs.
-7. Try to avoid overly specific examples or code references as they may go “out of date” in future Minecraft versions.
+> **Note about lambda parameters:**
+> 
+> Currently, there is no fullly automated solution for verifying that mapped lambda parameters do not conflict with 
+> parameters (both method and other lambdas) or local variables. Care should be taken when naming and reviewing these.
+> 
+> As a workaround, Parchment has a 'checked' export which, among other things, strips out names for lambda parameters,
+> so projects which require non-conflicting parameter names (such as for recompilation of decompiled source) may use 
+> that instead.
+
+## Javadocs
+
+When documenting, try to keep explanations simple and concise without sacrificing accuracy. Avoid use of overly complex
+or lengthy words where simple and short words are sufficient.
+
+Documenting members should be prioritized into the following: public members, then important members, then non-obvious 
+members (commonly, getters which return numbers or opaque objects, such as NBT tags.) Methods should be documented over
+their corresponding fields.
+
+{:.list-separation}
+
+1. **Use fully qualified class names in javadoc tags which link to classes or their members.**
+    - Some of these javadoc tags are `{@link}` and `@see`.
+    - {:.small-text} _Example:_ `{@link net.minecraft.math.BlockPos}` instead of `{@link BlockPos}`.
+
+1. **Avoid adding overly simple information or "expected knowledge".**
+    - "Expected knowledge" means any fundamental knowledge of either Java or Minecraft which is assumed to be known by
+      any developer.
+        - {:.small-text} _Example:_ 
+
+          ```java
+          /**
+           * Constructor for a BlockPos
+           */
+          public BlockPos(...) { ... }
+          ```
+
+          This is expected knowledge; developers are expected to be able to identify a constructor in Java.
+          {:.small-text} 
+
+    - Overly simple information means javadocs which does not give any information that cannot be immediately inferred 
+      from the code. This explicity excludes javadocs which gives information that is not immediately inferrable, such
+      as the valid range of a number from a getter.
+        - {:.small-text} _Example:_ 
+
+          ```java
+          /**
+           * Returns the level.
+           *
+           * @return the level
+           */
+          public Level getLevel() { return this.level; }
+          ```
+
+          The knowledge of what the getter returns is immediately inferrable from the code and the getter name.
+          {:.small-text} 
+
+1. **Do not use the following javadoc tags:** `@author`, `@since`, `@param`.
+    - Due to the nature of the mapping data being made for Minecraft, a game made by Mojang Studios, it is inapproriate
+      to use the `@author` to mark the contributor for that javadoc.
+    - Because of the dynamic nature of the game code, it would be difficult to determine and maintain the approriate
+      `@since` tags for javadocs.
+    - Parameter javadocs should be specified at the parameter level. It is up to consumers of the mapping data to insert
+      `@param` entries for each named and documented parameter.
+
+1. **Avoid including overly specific code examples of game code.**
+    - These code examples may become out-of-date and incorrect in future Minecraft versions as the code they reference 
+      is moved, refactored, or deleted.
+
+*[mojmap]: portmanteau of 'Mojang' and 'mappings'
+[nbt]: https://minecraft.fandom.com/wiki/NBT_format
