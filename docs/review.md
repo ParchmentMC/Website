@@ -72,7 +72,7 @@ Pull Requests must abide by these requirements:
   conversations and no change requesting reviews. One (1) approving review must be from a member of the reviewers 
   subteam.
 
-    - If all review comments of a change requesting review from a member of the reviewers subteam have been resolved, 
+    - If all review comments of a change requesting review from a member of the mappings team have been resolved,
       and more than five (5) days have passed since the resolution of these review comments, then the review may be 
       dismissed as being outdated.
 
