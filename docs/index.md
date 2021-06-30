@@ -5,5 +5,5 @@ title: "Documentation"
 
 # Documentation
 
- * [Mapping Standards](mappings)
- * [Review Process](review)
+ * [Mapping Standards](mappings.html)
+ * [Review Process](review.html)

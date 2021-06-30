@@ -1,7 +1,7 @@
 pages:
   - name: 'About'
-    url: 'about'
+    url: 'about.html'
   - name: 'Discord'
-    url: 'discord'
+    url: 'discord.html'
   - name: 'Documentation'
-    url: 'docs/'
+    url: 'docs/index.html'
