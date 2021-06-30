@@ -1,3 +1,7 @@
 pages:
-  - {name: 'About', url: 'about.html'}
-  - {name: 'Discord', url: 'discord.html'}
+  - name: 'About'
+    url: 'about'
+  - name: 'Discord'
+    url: 'discord'
+  - name: 'Documentation'
+    url: 'docs/'
