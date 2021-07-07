@@ -15,9 +15,8 @@ Each major version or release of Minecraft which Parchment maintains a mapping s
 versions associated with that major versions are included into that one branch. Only the latest minor version of each 
 major release will be supported.
 
-The latest minor version of the latest major release will be the actively reviewed version, and is the recommended 
-target for contributions. While contributions to older major versions will not be rejected, they will be lower in 
-priority for review.
+The two latest major releases will be the actively reviewed versions, and are the recommended targets for contributions. 
+While contributions to older major versions will not be rejected, they will be lower in priority for review.
 
 If it is known that the latest minor version of the latest major release has major game-breaking bugs and there is a 
 hotfix version in preparation, the mappings team may choose to skip that minor version in favor of waiting for the 
