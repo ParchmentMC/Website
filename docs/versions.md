@@ -8,7 +8,7 @@ title: Version Policy
 ParchmentMC maintains a version policy to specify what versions of Minecraft are prioritized by the ParchmentMC team 
 for actively reviewing contributions. 
 
-Due to the technical and design requirements of the toolchain, Parchment only supports versions of Minecraft which has 
+Due to the technical and design requirements of the toolchain, Parchment only supports versions of Minecraft which have 
 published obfuscation logs.
 
 Each major version or release of Minecraft which Parchment maintains a mapping set for will have one branch. All minor 
