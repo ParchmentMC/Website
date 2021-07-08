@@ -10,8 +10,8 @@ Blackstone, along with releases and snapshots of the various toolchain projects,
 
 ### Maven Coordinates
 
-- **Blackstone**: `org.parchmentmc.data:blackstone:`_`<mc_version>`_
-- **Parchment**: `org.parchmentmc.data:parchment-`_`<mc_version>`_`:`_`<export_version>`_
+- **Blackstone**: `org.parchmentmc.data:blackstone:`_`<mc_version>`_`@zip`
+- **Parchment**: `org.parchmentmc.data:parchment-`_`<mc_version>`_`:`_`<export_version>`_`@zip`
     - Releases: _`<YYYY>`_`.`_`<MM>`_`.`_`<DD>`_
     - Nightly: _`<YYYY>`_`.`_`<MM>`_`.`_`<DD>`_`-nightly-SNAPSHOT`
     - Bleeding: `BLEEDING-SNAPSHOT`
