@@ -52,17 +52,6 @@ As a general standard, use American English spelling for words. For example, pre
 
 ## Javadocs
 
-Write sentences for class, method and field javadocs, starting with an uppercase and ending with a period. When
-documenting, try to keep explanations simple and concise without sacrificing accuracy. Avoid use of overly complex
-or lengthy words where simple and short words are sufficient.
-
-Descriptions on `@return` and `@param` entries may be incomplete sentences or phrases, such as 
-
-Do not insert line breaks for overlong columns. (The `.mapping` files should use single line `COMMENT` lines unless an
-an explicit line break in the javadoc comment is desired.) Use `<p>` tags on empty `COMMENT` lines if a line break is
-desired in the generated rendered view of the javadocs.
-
-
 {:.list-separation}
 
 1. **Use complete, meaningful, concise sentences**
