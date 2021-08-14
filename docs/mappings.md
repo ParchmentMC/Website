@@ -118,8 +118,19 @@ As a general standard, use American English spelling for words. For example, pre
       This can happen under the following cases:
       - The class is from the `java.lang` package.
       - The class is in the same package as the current class.
-      - The class is an inner class of the current class.
-    - {:.small-text} _Example:_ `{@link net.minecraft.math.BlockPos}` instead of `{@link BlockPos}`.
+      - The class is *used* by this class, as in, it is used as a field type, or method parameter within this class.
+    - {:.small-text} _Example:_
+
+      ```java
+      /**
+       * Use the fully qualified name to reference classes from another package.
+       * @see other.package.Foo
+       * Classes from java.lang or the same package can be referenced without fully qualified names.
+       * @see String
+       * This class, or classes used by this class can be referenced without fully qualified names.
+       * @see #someMethod(Baz, Bar)
+       */
+      ```
 
 1. **Avoid adding overly simple information or "expected knowledge".**
     - "Expected knowledge" means any fundamental knowledge of either Java or Minecraft which is assumed to be known by
