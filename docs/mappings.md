@@ -42,9 +42,25 @@ As a general standard, use American English spelling for words. For example, pre
 1. **Names should be named based on the parameter types and context of use.**
     - They should be verbose and use complete words. Avoid omitting essential information for the purpose of keeping the 
       name compact.
-    - Use the surrounding mojang class, field, and method names to infer parameter names. Prefer matching the mojang naming
-      rather than trying to improve on it.
     - {:.small-text} _Examples:_ `BlockPos adjacentPos, BlockPos currentPos`, not `BlockPos pos1, BlockPos pos2`
+    - Use the surrounding Mojang class, field, and method names to infer parameter names. Prefer matching the Mojang naming
+      rather than trying to improve on it.
+      - If matching the mojang name leaves a parameter's usage unclear, consider adding a parameter javadoc with an
+        explanation of that parameter.
+    - {:.small-text} _Example:_
+
+      ```java
+      private boolean cantTouchThis;
+
+      /**
+       * @param cantTouchThis If the parameter name is unclear, a parameter javadoc could be added to explain the
+       *                      usage in more detail.
+       */
+      public Foo(boolean cantTouchThis) { // Note this parameter is named to match the field name
+        this.cantTouchThis = cantTouchThis;
+      } 
+
+      ```
 
 1. **Avoid abbreivations or acronyms.**
     - _Exception:_ Common or well-known abbreviations can be used: `IO` (input-output), `Id` (identifier).
@@ -57,22 +73,23 @@ As a general standard, use American English spelling for words. For example, pre
 1. **Use complete, meaningful, concise sentences**
     - Try and keep explanations simple and concise without sacrificing accuracy. Avoid the use of overly complicated 
       words where short and simple descriptions are sufficient.
-    - Avoid the use of domain specific knowledge that the reader would not be assumed to have if it is not necessary.
+    - Avoid the use of domain specific knowledge that the reader would not be expected to know if a simpler or clearer
+      explanation can be found.
     - Write complete sentences for documentation, starting with an uppercase letter and ending with a period.
-    - _Exception:_ Phrases in `@return` or `@param` may use short phrases that are not sentences.
+    - _Exception:_ Descriptions in `@return`, `@param`, or `@throws` may use short phrases that are not sentences.
       - {:.small-text} _Example:_
         
         ```java
         /**
          * This is a full sentence. It begins with a capital letter and ends with a period.
-         * Note that the below two tags may, and are allowed, to use short phrases rather than complete sentences.
+         * Note that the below two lines may use short phrases rather than complete sentences.
          * @param foo the current foo
          * @return the modified foo
          */
         ```
 
 1. **Do not insert unnesecary line breaks.**
-    - Do not manually insert line breaks for long columns, or try and manually hard wrap sentences.
+    - Do not manually insert line breaks for long lines, or explicitly hard wrap sentences.
       - Each new `COMMENT` line will insert a line break in the comment, and column limits are enforced by end mapping consumers.
     - Do use line breaks if there is a logical need to start a paragraph in the javadoc comment.
       - {:.small-text} _Example:_
