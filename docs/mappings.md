@@ -88,7 +88,7 @@ As a general standard, use American English spelling for words. For example, pre
          */
         ```
 
-1. **Do not insert unnesecary line breaks.**
+1. **Do not insert unnecessary line breaks.**
     - Do not manually insert line breaks for long lines, or explicitly hard wrap sentences.
       - Each new `COMMENT` line will insert a line break in the comment, and column limits are enforced by end mapping consumers.
     - Do use line breaks if there is a logical need to start a paragraph in the javadoc comment.
