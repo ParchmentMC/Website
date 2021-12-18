@@ -38,6 +38,11 @@ title: About
   font-size: 1.0em;
 }
 
+.team-container .name a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .team-container .role {
   font-weight: 500;
   text-decoration: underline;
@@ -60,7 +65,11 @@ title: About
     {% endcapture %}
     {% if team_member.avatar %} {% assign avatar = team_member.avatar %} {% endif %}
     <img class="avatar" src="{{ avatar }}">
-    <div class="name">{{ team_member.name }}</div>
+    <div class="name">
+    {% if team_member.github %} <a href="https://github.com/{{ team_member.github }}"> {% endif %}
+    {{ team_member.name }}
+    {% if team_member.github %} </a> {% endif %}
+    </div>
     <div class="role">{{ team_member.role }}</div>
     <div class="teams">{{ team_member.teams }}</div>
   </div>
