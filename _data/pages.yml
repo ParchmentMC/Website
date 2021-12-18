@@ -1,5 +1,5 @@
 pages:
-  - name: 'About'
-    url: 'about.html'
   - name: 'Documentation'
     url: 'docs/index.html'
+  - name: 'About'
+    url: 'about.html'
