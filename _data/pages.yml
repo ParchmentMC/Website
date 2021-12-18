@@ -1,7 +1,5 @@
 pages:
   - name: 'About'
     url: 'about.html'
-  - name: 'Discord'
-    url: 'https://discord.parchmentmc.org/'
   - name: 'Documentation'
     url: 'docs/index.html'

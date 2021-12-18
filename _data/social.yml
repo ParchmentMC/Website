@@ -5,7 +5,7 @@
 
 social:
   - {icon: 'github', type: "brand", link: 'https://www.github.com/ParchmentMC'}
+  - {icon: 'discord', type: "brand", link: 'https://discord.parchmentmc.org'}
   - {icon: 'twitter', type: "brand", link: 'https://twitter.com/mc_parchment'}
-
   - {icon: 'envelope', type: "solid", link: 'mailto:info@parchmentmc.org'}
   - {icon: 'rss', type: "solid", link: "/feed.xml"}
