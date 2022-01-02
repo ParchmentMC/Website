@@ -60,9 +60,7 @@ title: About
 <div class="team-container">
 {% for team_member in site.team_members %}
   <div class="member">
-    {% capture avatar %}
-    https://github.com/{{ team_member.github }}.png
-    {% endcapture %}
+    {% capture avatar %}https://github.com/{{ team_member.github }}.png{% endcapture %}
     {% if team_member.avatar %} {% assign avatar = team_member.avatar %} {% endif %}
     <img class="avatar" src="{{ avatar }}">
     <div class="name">
