@@ -62,7 +62,7 @@ As a general standard, use American English spelling for words. For example, pre
 
       ```
 
-1. **Avoid abbreivations or acronyms.**
+1. **Avoid abbreviations or acronyms.**
     - _Exception:_ Common or well-known abbreviations can be used: `IO` (input-output), `Id` (identifier).
     - _Exception:_ Names for common classes can be shortened: `BlockPos pos`, `BlockState state`, `WorldGenLevel level`
 
@@ -101,7 +101,7 @@ As a general standard, use American English spelling for words. For example, pre
       ```
     
     - If a new paragraph in the _compiled javadoc_ is desired, use the `<p>` tag on empty lines. This is up to the writer's
-      choice and not enforced. Stay consistient with nearby existing documentation.
+      choice and not enforced. Stay consistent with nearby existing documentation.
       - {:.small-text} _Example:_
 
       ```java
@@ -148,7 +148,7 @@ As a general standard, use American English spelling for words. For example, pre
           {:.small-text} 
 
     - Overly simple information means javadocs which does not give any information that cannot be immediately inferred 
-      from the code. This explicity excludes javadocs which gives information that is not immediately inferrable, such
+      from the code. This explicitly excludes javadocs which gives information that cannot be inferred immediately, such
       as the valid range of a number from a getter.
         - {:.small-text} _Example:_ 
 
@@ -161,13 +161,13 @@ As a general standard, use American English spelling for words. For example, pre
           public Level getLevel() { return this.level; }
           ```
 
-          The knowledge of what the getter returns is immediately inferrable from the code and the getter name.
+          The knowledge of what the getter returns can be inferred immediately from the code and the getter name.
           {:.small-text} 
 
 1. **Do not use the following javadoc tags:** `@author`, `@since`, `@param`.
-    - Due to the nature of the mapping data being made for Minecraft, a game made by Mojang Studios, it is inapproriate
+    - Due to the nature of the mapping data being made for Minecraft, a game made by Mojang Studios, it is inappropriate
       to use the `@author` to mark the contributor for that javadoc.
-    - Because of the dynamic nature of the game code, it would be difficult to determine and maintain the approriate
+    - Because of the dynamic nature of the game code, it would be difficult to determine and maintain the appropriate
       `@since` tags for javadocs.
     - Parameter javadocs should be specified at the parameter level. It is up to consumers of the mapping data to insert
       `@param` entries for each named and documented parameter.
