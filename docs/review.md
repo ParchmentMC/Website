@@ -91,21 +91,3 @@ Pull Requests must abide by these requirements:
       
       For example, the member may decide to request a secondary opinion/review of another member of the mappings team
       regarding the contents of the PR.
-
-## Fixed-Length Discussion
-
-If a PR generates conflicting opinions and reviews or creates a large discussion that warrants an extended period of
-time for discussion, the reviewers sub-team may place the PR under a fixed-length discussion period. During the 
-fixed-length period, discussions may freely occur between reviews on the PR. 
-
-After this period has elapsed, the reviewers sub-team will hold an internal vote on whether the PR shall be merged.
-If a majority votes in favor, then the PR shall be assigned for merging. If a majority votes in dissent, then the PR 
-shall be closed. For a tie, the whole mappings team will vote, and a tie will mean the PR shall be closed. A majority 
-is defined as more than fifty percent (50%) of the voters.
-
-### Length
-
-The length of the discussion will last at least forty-eight (48) hours, and at most one (1) week. If the discussion 
-does not yet seem to have reached a conclusion, the designated fixed length of the discussion is less or equal to 
-seventy-two (72) hours, and the fixed length has not yet been extended, then the fixed-length discussion period may be 
-extended by up to forty-eight (48) hours, upon the consensus of the reviewers sub-team.
