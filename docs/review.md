@@ -66,51 +66,28 @@ Pull Requests must abide by these requirements:
       requested from the reviewers sub-team.
 
 - <span class="fa-li"><i class="fas fa-comments"></i></span> 
-  The PR will now be reviewed by at least one (1) member of the reviewers sub-team, and at least by two people.
+  The PR will now be reviewed by the reviewers sub-team. They may choose to approve the PR, request changes, or 
+  neutrally leave comments.
 
-  For a PR to be considered for merging, it must have at least two (2) approving reviews without any unresolved 
-  conversations and no change requesting reviews. One (1) approving review must be from a member of the reviewers 
-  sub-team.
+  For a PR to be considered for merging, it must have at least one (1) approving review from a member of the reviewers 
+  sub-team without any unresolved conversations and no pending changes from reviews.
 
-    - If all review comments of a change requesting review from a member of the mappings team have been resolved,
-      and more than five (5) days have passed since the resolution of these review comments, then the review may be 
-      dismissed as being outdated.
+    {:.fa-ul .outline}
+    - <span class="fa-li"><i class="fas fa-comment-slash"></i></span> 
+      If a change requesting review from a member of the mappings team has been resolved, their review may be dismissed
+      as being outdated at the discretion of another member of the mappings team.
 
       This prevents situations where a reviewer requests changes on a PR then becomes unable to re-review the PR for an 
-      extended period of time, which blocks the PR from being considered for merging (as a change requesting review is
-      present on the PR from a member of the reviewers sub-team).
-
-- <span class="fa-li"><i class="fas fa-hourglass-start"></i> </span>
-  After a PR has passed the review requirements above, a waiting period of at least forty-eight (48) hours for any 
-  further comments or reviews will begin.
-
-    - For minor changes, a member of the reviewers sub-team may reduce the waiting period to twenty-four (24) hours.
-    - For PRs which generate conflicting opinions or large discussions, the PR may be placed under a fixed-length 
-      discussion period (see the following section).
-
-- <span class="fa-li"><i class="fas fa-hourglass-end"></i> </span>
-  Once the waiting period has elapsed without any further change requesting reviews from any mappings team member, or 
-  a fixed-length discussion period has elapsed (see following section), it will be assigned to the reviewers sub-team 
-  for merging.
+      extended period of time, which delays the PR from being considered for merging.
 
 - <span class="fa-li"><i class="fas fa-code-branch"></i></span>
-  An available member of the reviewers sub-team will then squash-merge the PR, integrating the changes into the 
-  target branch.
+  After a PR has passed the review requirements above, a member of the mappings team (which may be the same approving 
+  member of the reviewers sub-team) may then squash-merge the PR, integrating the changes into the target branch.
 
-## Fixed-Length Discussion
-
-If a PR generates conflicting opinions and reviews or creates a large discussion that warrants an extended period of
-time for discussion, the reviewers sub-team may place the PR under a fixed-length discussion period. During the 
-fixed-length period, discussions may freely occur between reviews on the PR. 
-
-After this period has elapsed, the reviewers sub-team will hold an internal vote on whether the PR shall be merged.
-If a majority votes in favor, then the PR shall be assigned for merging. If a majority votes in dissent, then the PR 
-shall be closed. For a tie, the whole mappings team will vote, and a tie will mean the PR shall be closed. A majority 
-is defined as more than fifty percent (50%) of the voters.
-
-### Length
-
-The length of the discussion will last at least forty-eight (48) hours, and at most one (1) week. If the discussion 
-does not yet seem to have reached a conclusion, the designated fixed length of the discussion is less or equal to 
-seventy-two (72) hours, and the fixed length has not yet been extended, then the fixed-length discussion period may be 
-extended by up to forty-eight (48) hours, upon the consensus of the reviewers sub-team.
+    {:.fa-ul .outline}
+    - <span class="fa-li"><i class="fas fa-hourglass"></i></span> 
+      The approving member of the reviewers sub-team or the member of the mappings team responsible for merging the PR
+      may temporarily delay the merging of the PR at their discretion. 
+      
+      For example, the member may decide to request a secondary opinion/review of another member of the mappings team
+      regarding the contents of the PR.
