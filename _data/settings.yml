@@ -1,7 +1,7 @@
 #Subtitle
 subtitle:
   active: true
-  text: Open community-sourced parameter names and javadocs.
+  text: Open community-sourced parameter names and javadocs. Infos for setting it up is avaiable <a href="https://github.com/ParchmentMC/Parchment/wiki/Getting-Started">here</a>.
 
 #Nav
 nav:
