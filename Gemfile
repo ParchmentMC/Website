@@ -7,7 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.2"
+gem "jekyll", "~> 3.9.2"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
@@ -22,7 +22,7 @@ end
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 1.2"
+  gem "tzinfo", "~> 2.0"
   gem "tzinfo-data"
 end
 
@@ -30,8 +30,8 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Custom gems
-gem "jekyll-yamt"
 gem 'jekyll-watch'
 gem "webrick", "~> 1.7"
 gem "jekyll-redirect-from"
-gem "jekyll-mentions"
+gem "jekyll-mentions", "1.5.1"
+gem "beautiful-jekyll-theme", "5.0.0"
