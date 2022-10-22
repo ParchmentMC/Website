@@ -33,14 +33,14 @@ As a general standard, use American English spelling for words. For example, pre
     Alphanumeric characters mean the characters in the ranges `A-Z`, `a-z`, and `0-9`.
 
     > _Examples:_ `someVariable`, not `delta$` or `Delta`.
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
 1. **Names must be in lower camel case.**
 
     Lower camel case is written by joining together words and capitalizing the first character of each word except the first.
 
     > _Examples:_ `lowerCamelCase`, `areaTransformer`, `generatedItem`.
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
 1. **Names should be named based on the parameter types and context of use.**
 
@@ -48,7 +48,7 @@ As a general standard, use American English spelling for words. For example, pre
     compact.
 
     > _Examples:_ `BlockPos adjacentPos, BlockPos currentPos`, not `BlockPos pos1, BlockPos pos2`.
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
     Use the surrounding Mojang class, field, and method names to infer parameter names. Prefer matching the Mojang naming
     rather than trying to improve on it. If matching the mojang name leaves a parameter's usage unclear, consider adding a
@@ -68,7 +68,7 @@ As a general standard, use American English spelling for words. For example, pre
     > } 
     > ```
     >
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
 1. **Avoid abbreviations or acronyms.**
 
@@ -103,7 +103,7 @@ As a general standard, use American English spelling for words. For example, pre
     >   */
     > ```
     >
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
 1. **Do not insert unnecessary line breaks.**
 
@@ -120,7 +120,7 @@ As a general standard, use American English spelling for words. For example, pre
     >   COMMENT This is a second sentence, which starts a new line in the comment.
     > ```
     >
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
     If a new paragraph in the _compiled javadoc_ is desired, use the `<p>` tag on empty lines. This is up to the writer's
     choice and not enforced. Stay consistent with nearby existing documentation.
@@ -135,7 +135,7 @@ As a general standard, use American English spelling for words. For example, pre
     >   */
     > ```
     >
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
 1. **Linking to other parts of the code.**
 
@@ -159,7 +159,7 @@ As a general standard, use American English spelling for words. For example, pre
     >   */
     > ```
     >
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
 1. **Avoid adding overly simple information or "expected knowledge".**
 
@@ -176,7 +176,7 @@ As a general standard, use American English spelling for words. For example, pre
     > ```
     >
     > This is expected knowledge; developers are expected to be able to identify a constructor in Java.
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
     Overly simple information means javadocs which does not give any information that cannot be immediately inferred
     from the code. This explicitly excludes javadocs which gives information that cannot be inferred immediately, such
@@ -194,7 +194,7 @@ As a general standard, use American English spelling for words. For example, pre
     > ```
     >
     > The knowledge of what the getter returns can be inferred immediately from the code and the getter name.
-    {:.note.example-icon}
+    {:.note.icon.note-example}
 
 1. **Do not use the following javadoc tags:** `@author`, `@since`, `@param`.
 
