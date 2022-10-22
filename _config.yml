@@ -56,8 +56,8 @@ footer-hover-col: "#0085A1"
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
 #mobile-theme-col: "#0085A1"
 
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/notes.css"
 #site-js:
 #  - "/assets/js/custom-script.js"
 
