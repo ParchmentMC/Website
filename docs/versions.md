@@ -3,8 +3,6 @@ layout: page
 title: Version Policy
 ---
 
-# Version Policy
-
 ParchmentMC maintains a version policy to specify what versions of Minecraft are prioritized by the ParchmentMC team 
 for actively reviewing contributions. 
 

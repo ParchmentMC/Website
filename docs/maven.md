@@ -3,8 +3,6 @@ layout: page
 title: Maven Repository and Artifacts
 ---
 
-# Maven Repository
-
 ParchmentMC hosts its official repository at **`https://maven.parchmentmc.org/`**. All exports of Parchment and 
 Blackstone, along with releases and snapshots of the various toolchain projects, are hosted on this repository.
 

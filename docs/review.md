@@ -10,8 +10,6 @@ title: PR Review Process
 }
 </style>
 
-# PR Review Process
-
 All contributions to the Parchment mappings data are reviewed and merged according to this process. This ensures
 transparency between the mappings contributors and the ParchmentMC team, and allows contributors to assess at what
 stage their PR is at.

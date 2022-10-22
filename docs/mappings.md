@@ -13,8 +13,6 @@ title: Mapping Standards
 }
 </style>
 
-# Mapping Standards
-
 To ensure consistency for the Parchment mapping data, both to the benefit of reviewers and to consumers of the mappings,
 this page shows the mapping standards and guidelines. These standards are the basis used by reviewers when checking
 contributions.
