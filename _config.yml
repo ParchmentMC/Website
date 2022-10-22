@@ -10,6 +10,7 @@ navbar-links:
     - Maven Repository and Artifacts: "docs/maven"
     - Review Process: "docs/review"
     - Version Policy: "docs/versions"
+  FAQ: "faq"
   About: "about"
 
 avatar: "/assets/img/logo.png"
