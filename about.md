@@ -10,10 +10,6 @@ title: About
 <style>
 .team-container {
   margin: 1em auto;
-  /* display: grid; */
-  /* grid-template-columns: repeat(4, 1fr); */
-  /* column-gap: 1em; */
-  /* row-gap: 1em; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
