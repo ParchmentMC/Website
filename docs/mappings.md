@@ -17,8 +17,8 @@ To ensure consistency for the Parchment mapping data, both to the benefit of rev
 this page shows the mapping standards and guidelines. These standards are the basis used by reviewers when checking
 contributions.
 
-The Parchment mapping set is based off of the names provided by the obfuscation maps that Mojang publishes for all 
-versions since 1.14. These names are referred to by Parchment as **'official'** names, **'Mojang'** names, or 
+The Parchment mapping set is based off of the names provided by the obfuscation maps that Mojang publishes for all
+versions since 1.14. These names are referred to by Parchment as **'official'** names, **'Mojang'** names, or
 **'mojmap'** names, in contrast to the _'obfuscated'_ names found in the client and server JARs.
 
 As a general standard, use American English spelling for words. For example, prefer `color` to `colour`, or `armor` to
@@ -29,16 +29,16 @@ As a general standard, use American English spelling for words. For example, pre
 {:.list-separation}
 
 1. **Names must only contain alphanumeric characters, and must begin with a lowercase letter.**
-    - Alphanumeric characters means the characters in the ranges `A-Z`, `a-z`, and `0-9`.
+    - Alphanumeric characters mean the characters in the ranges `A-Z`, `a-z`, and `0-9`.
     - {:.small-text} _Examples:_ `someVariable`, not `delta$` or `Delta`
 
 1. **Names must be in lower camel case.**
-    - Lower camel case is written by joining together words and capitalizing the first character of each word except 
+    - Lower camel case is written by joining together words and capitalizing the first character of each word except
       the first.
     - {:.small-text} _Examples:_ `lowerCamelCase`, `areaTransformer`, `generatedItem`
 
 1. **Names should be named based on the parameter types and context of use.**
-    - They should be verbose and use complete words. Avoid omitting essential information for the purpose of keeping the 
+    - They should be verbose and use complete words. Avoid omitting essential information for the purpose of keeping the
       name compact.
     - {:.small-text} _Examples:_ `BlockPos adjacentPos, BlockPos currentPos`, not `BlockPos pos1, BlockPos pos2`
     - Use the surrounding Mojang class, field, and method names to infer parameter names. Prefer matching the Mojang naming
@@ -57,7 +57,6 @@ As a general standard, use American English spelling for words. For example, pre
       public Foo(boolean cantTouchThis) { // Note this parameter is named to match the field name
         this.cantTouchThis = cantTouchThis;
       } 
-
       ```
 
 1. **Avoid abbreviations or acronyms.**
@@ -69,14 +68,14 @@ As a general standard, use American English spelling for words. For example, pre
 {:.list-separation}
 
 1. **Use complete, meaningful, concise sentences**
-    - Try and keep explanations simple and concise without sacrificing accuracy. Avoid the use of overly complicated 
+    - Try and keep explanations simple and concise without sacrificing accuracy. Avoid the use of overly complicated
       words where short and simple descriptions are sufficient.
     - Avoid the use of domain specific knowledge that the reader would not be expected to know if a simpler or clearer
       explanation can be found.
     - Write complete sentences for documentation, starting with an uppercase letter and ending with a period.
     - _Exception:_ Descriptions in `@return`, `@param`, or `@throws` may use short phrases that are not sentences.
       - {:.small-text} _Example:_
-        
+
         ```java
         /**
          * This is a full sentence. It begins with a capital letter and ends with a period.
@@ -92,12 +91,12 @@ As a general standard, use American English spelling for words. For example, pre
     - Do use line breaks if there is a logical need to start a paragraph in the javadoc comment.
       - {:.small-text} _Example:_
 
-      ```
+      ```text
       FIELD foo Foo
         COMMENT This is a comment, it is not wrapped, even though the sentence may be very long.
         COMMENT This is a second sentence, which starts a new line in the comment.
       ```
-    
+
     - If a new paragraph in the _compiled javadoc_ is desired, use the `<p>` tag on empty lines. This is up to the writer's
       choice and not enforced. Stay consistent with nearby existing documentation.
       - {:.small-text} _Example:_
@@ -116,7 +115,7 @@ As a general standard, use American English spelling for words. For example, pre
       This can happen under the following cases:
       - The class is from the `java.lang` package.
       - The class is in the same package as the current class.
-      - The class is *used* by this class, as in, it is used as a field type, or method parameter within this class.
+      - The class is _used_ by this class, as in, it is used as a field type, or method parameter within this class.
     - {:.small-text} _Example:_
 
       ```java
@@ -133,7 +132,7 @@ As a general standard, use American English spelling for words. For example, pre
 1. **Avoid adding overly simple information or "expected knowledge".**
     - "Expected knowledge" means any fundamental knowledge of either Java or Minecraft which is assumed to be known by
       any developer.
-        - {:.small-text} _Example:_ 
+        - {:.small-text} _Example:_
 
           ```java
           /**
@@ -143,12 +142,12 @@ As a general standard, use American English spelling for words. For example, pre
           ```
 
           This is expected knowledge; developers are expected to be able to identify a constructor in Java.
-          {:.small-text} 
+          {:.small-text}
 
-    - Overly simple information means javadocs which does not give any information that cannot be immediately inferred 
+    - Overly simple information means javadocs which does not give any information that cannot be immediately inferred
       from the code. This explicitly excludes javadocs which gives information that cannot be inferred immediately, such
       as the valid range of a number from a getter.
-        - {:.small-text} _Example:_ 
+        - {:.small-text} _Example:_
 
           ```java
           /**
@@ -160,7 +159,7 @@ As a general standard, use American English spelling for words. For example, pre
           ```
 
           The knowledge of what the getter returns can be inferred immediately from the code and the getter name.
-          {:.small-text} 
+          {:.small-text}
 
 1. **Do not use the following javadoc tags:** `@author`, `@since`, `@param`.
     - Due to the nature of the mapping data being made for Minecraft, a game made by Mojang Studios, it is inappropriate
@@ -171,7 +170,7 @@ As a general standard, use American English spelling for words. For example, pre
       `@param` entries for each named and documented parameter.
 
 1. **Avoid including overly specific code examples of game code.**
-    - These code examples may become out-of-date and incorrect in future Minecraft versions as the code they reference 
+    - These code examples may become out-of-date and incorrect in future Minecraft versions as the code they reference
       is moved, refactored, or deleted.
 
 *[mojmap]: portmanteau of 'Mojang' and 'mappings'
