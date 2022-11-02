@@ -5,6 +5,7 @@ title: ParchmentMC
 author: The ParchmentMC Team
 
 navbar-links:
+  Getting Started: "docs/getting-started"
   Documentation:
     - Mapping Standards: "docs/mappings"
     - Maven Repository and Artifacts: "docs/maven"
