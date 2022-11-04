@@ -17,6 +17,9 @@ group :jekyll_plugins do
     gem 'jekyll-feed'
     gem 'jekyll-seo-tag'
     gem 'jekyll-sitemap'
+    gem "jekyll-redirect-from"
+    gem "jekyll-mentions", "1.5.1"
+    gem 'jekyll-watch'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -30,8 +33,5 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Custom gems
-gem 'jekyll-watch'
 gem "webrick", "~> 1.7"
-gem "jekyll-redirect-from"
-gem "jekyll-mentions", "1.5.1"
 gem "beautiful-jekyll-theme", "5.0.0"
