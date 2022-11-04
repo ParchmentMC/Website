@@ -24,10 +24,10 @@ bundle exec jekyll build
 
 ### Development
 
-For site development, the following command builds the site on each change and serves the site through a local webserver.
+For site development, the following command builds and reloads the site on each change and serves the site through a local webserver.
 
 ```text
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 ```
 
 Note that changes to the `_config.yml` file requires a full restart of Jekyll (exit and rerun the above command).
