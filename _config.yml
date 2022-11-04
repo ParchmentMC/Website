@@ -68,7 +68,7 @@ date_format: "%B %-d, %Y"
 timezone: "Etc/UTC"
 markdown: kramdown
 highlighter: rouge
-paginate: 5
+#paginate: 5 # Do not paginate, since that requires index.html but we use an index.md
 
 kramdown:
   input: GFM
