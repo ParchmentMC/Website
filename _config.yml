@@ -12,6 +12,7 @@ navbar-links:
     - Review Process: "docs/review"
     - Version Policy: "docs/versions"
   FAQ: "faq"
+  Discord: https://discord.parchmentmc.org/
   About: "about"
 
 avatar: "/assets/img/logo.png"
