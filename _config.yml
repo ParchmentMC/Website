@@ -59,8 +59,9 @@ footer-hover-col: "#0085A1"
 
 site-css:
   - "/assets/css/notes.css"
-#site-js:
-#  - "/assets/js/custom-script.js"
+  - "/assets/css/tabs.css"
+site-js:
+  - "/assets/js/tabs.js"
 
 # Ruby Date Format to show dates of posts
 date_format: "%B %-d, %Y"
@@ -100,6 +101,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-mentions
+  - jekyll-tabs
 
 # Collections
 collections:
