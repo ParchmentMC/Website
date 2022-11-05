@@ -23,14 +23,23 @@ When selecting the Parchment mappings version from the version badges above or i
 
 Installing the mappings varies depending on the modding platform to be used. Here are simplified instructions for the most common modding platforms.
 
+<!-- 
+NOTE: Because of some bug in the jekyll-tabs plugin, reference links ("[link text][link-ref]") do not function correctly.
+Until that can be fixed, please use inline links ("[link text](example.com)") in tabs.
+-->
+
+{% tabs parchment-setup %}
+
+{% tab parchment-setup Forge and ForgeGradle %}
+
 ### Forge and ForgeGradle
 
-ParchmentMC provides the [**Librarian**][librarian] gradle plugin to allow the use of Parchment mappings in a Minecraft Forge development environment. The plugin requires a ForgeGradle version of at least **5.1.20**, and a Gradle version of **7.1.1** or higher.
+ParchmentMC provides the [**Librarian**](https://github.com/ParchmentMC/Librarian) gradle plugin to allow the use of Parchment mappings in a Minecraft Forge development environment. The plugin requires a ForgeGradle version of at least **5.1.20**, and a Gradle version of **7.1.1** or higher.
 
-> For full installation instructions and documentation, consult the [relevant documentation][librarian_fg] in the plugin's repository. This page assumes you are using a 1.19 MDK with the new plugin DSL in use.
+> For full installation instructions and documentation, consult the [relevant documentation](https://github.com/ParchmentMC/Librarian/blob/dev/docs/FORGEGRADLE.md) in the plugin's repository. This page assumes you are using a 1.19 MDK with the new plugin DSL in use.
 {:.note}
 ^
-> Users of the Librarian plugin will notice that all parameters are prefixed with `p`. Please consult [the FAQ][faq-param-prefix] for details.
+> Users of the Librarian plugin will notice that all parameters are prefixed with `p`. Please consult [the FAQ](/docs/faq#why-are-my-parameter-names-prefixed-with-p) for details.
 {:.note.orange-note}
 
 ---
@@ -86,9 +95,13 @@ ParchmentMC provides the [**Librarian**][librarian] gradle plugin to allow the u
     > {:.note.icon.note-example}
     {:.note.yellow-note}
 
+{% endtab %}
+
+{% tab parchment-setup Fabric and Fabric Loom %}
+
 ### Fabric and Fabric Loom
 
-[**Fabric Loom**][fabric-loom] provides native support for Parchment mappings as of version 0.9.
+[**Fabric Loom**](https://github.com/FabricMC/fabric-loom) provides native support for Parchment mappings as of version 0.9.
 
 1. **Install the Parchment repository** in your buildscript's `repositories` block.
 
@@ -105,11 +118,11 @@ ParchmentMC provides the [**Librarian**][librarian] gradle plugin to allow the u
 
     ```gradle
     dependencies {
-    // ...
-    mappings loom.layered() {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-1.17.1:2021.09.05@zip")
-    }
+        // ...
+        mappings loom.layered() {
+            officialMojangMappings()
+            parchment("org.parchmentmc.data:parchment-1.17.1:2021.09.05@zip")
+        }
     }
     ```
 
@@ -117,14 +130,20 @@ ParchmentMC provides the [**Librarian**][librarian] gradle plugin to allow the u
     > <code class="version">org.parchmentmc.data:parchment-<u>Minecraft version</u>:<u>YYYY</u>.<u>MM</u>.<u>DD</u>@zip</code>
     {:.note.yellow-note}
 
-3. _(Optional)_ Run the `genSources` task to (re)generate the Minecraft sources JAR. If your IDE fails to auto-detect the sources JAR when browsing Minecraft classes, manually select the JAR file ending with `-sources.jar` when prompted by your IDE.
+3. _(Optional)_ Run the `genSources` task to (re)generate the Minecraft sources JAR.
+
+    If your IDE fails to auto-detect the sources JAR when browsing Minecraft classes, manually select the JAR file ending with `-sources.jar` when prompted by your IDE.
+
+{% endtab %}
+
+{% endtabs %}
+
+---
+
+**Thank you for choosing Parchment mappings!** For any questions, please visit [the official Discord server](https://discord.parchmentmc.org/).
 
 [1.17-branch]: https://github.com/ParchmentMC/Parchment/tree/versions/1.17.x
 [exports-info]: /docs/maven#parchment-exports
-[librarian]: https://github.com/ParchmentMC/Librarian
-[faq-param-prefix]: faq#why-are-my-parameter-names-prefixed-with-p
-[librarian_fg]: https://github.com/ParchmentMC/Librarian/blob/dev/docs/FORGEGRADLE.md
-[fabric-loom]: https://github.com/FabricMC/fabric-loom
 
 <style>
 
