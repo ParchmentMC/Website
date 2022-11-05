@@ -3,22 +3,6 @@ layout: page
 title: Getting Started
 ---
 
-<style>
-
-.version u {
-    font-style: italic;
-}
-
-.version u::before {
-    content: "<";
-}
-
-.version u::after {
-    content: ">";
-}
-
-</style>
-
 ## Choosing a version
 
 ParchmentMC provides three categories of exports for Parchment mappings, as detailed on [our site][exports-info]: **release** exports, **nightly** exports, and **bleeding edge** exports. The recommendation is to use release exports, which are represented as dated non-snapshot published artifacts on our Maven repository.
@@ -105,3 +89,19 @@ After applying these changes or updating to a new mappings export version, run t
 [librarian_fg]: https://github.com/ParchmentMC/Librarian/blob/dev/docs/FORGEGRADLE.md
 [librarian_fg_cross_version_mappings]: https://github.com/ParchmentMC/Librarian/blob/dev/docs/FORGEGRADLE.md#cross-version-mappings
 [fabric-loom]: https://github.com/FabricMC/fabric-loom
+
+<style>
+
+.version u {
+    font-style: italic;
+}
+
+.version u::before {
+    content: "<";
+}
+
+.version u::after {
+    content: ">";
+}
+
+</style>

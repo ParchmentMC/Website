@@ -3,16 +3,6 @@ layout: page
 title: Mapping Standards
 ---
 
-<style>
-.small-text {
-    list-style: none;
-    font-size: 0.9em !important;
-}
-.list-separation > li {
-    margin-bottom: 0.5em;
-}
-</style>
-
 To ensure consistency for the Parchment mapping data, both to the benefit of reviewers and to consumers of the mappings,
 this page shows the mapping standards and guidelines. These standards are the basis used by reviewers when checking
 contributions.
@@ -213,3 +203,13 @@ As a general standard, use American English spelling for words. For example, pre
     is moved, refactored, or deleted.
 
 *[mojmap]: portmanteau of 'Mojang' and 'mappings'
+
+<style>
+.small-text {
+    list-style: none;
+    font-size: 0.9em !important;
+}
+.list-separation > li {
+    margin-bottom: 0.5em;
+}
+</style>

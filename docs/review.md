@@ -3,13 +3,6 @@ layout: page
 title: PR Review Process
 ---
 
-<style>
-.fa-ul.outline .fa-li {
-    font-size: 1.3em;
-    width: 2.25em;
-}
-</style>
-
 All contributions to the Parchment mappings data are reviewed and merged according to this process. This ensures
 transparency between the mappings contributors and the ParchmentMC team, and allows contributors to assess at what
 stage their PR is at.
@@ -89,3 +82,10 @@ Pull Requests must abide by these requirements:
 
     For example, the member may decide to request a secondary opinion/review of another member of the mappings team
     regarding the contents of the PR.
+
+<style>
+.fa-ul.outline .fa-li {
+    font-size: 1.3em;
+    width: 2.25em;
+}
+</style>
