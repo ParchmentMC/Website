@@ -3,7 +3,7 @@ layout: page
 title: Getting Started
 ---
 
-## 1. Choose a version {#choose-a-version}
+## Choose a version
 
 Parchment mappings are provided in [three flavors][exports-info], but most users will only really need to use the _release_ exports.
 
@@ -19,7 +19,7 @@ The latest version of the release export for a particular Minecraft version can 
 
 When selecting the Parchment mappings version from the version badges above or in the README, please remove the `v` prefix before inserting it into your buildscript.
 
-## 2. Install the mappings {#install-the-mappings}
+## Install the mappings
 
 Installing the mappings varies depending on the modding platform to be used. Here are simplified instructions for the most common modding platforms.
 
