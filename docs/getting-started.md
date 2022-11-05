@@ -27,8 +27,8 @@ To find the latest version of the release or nightly exports for a particular su
 
 For convenience, the following is a table containing the version badges for the latest versions of the release exports. Note that the latest versions of the release exports for each Minecraft version are likely to coincide as they are regularly published on the same day.
 
-|   Version  | Badge |
-|:----------:|-------|
+| Minecraft Version | Mappings Version |
+|:-----------------:|:----------------:|
 | **1.19.2** | ![Latest release version badge for 1.19.2](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.19.2%2Fmaven-metadata.xml) |
 | **1.18.2** | ![Latest release version badge for 1.18.2](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.18.2%2Fmaven-metadata.xml) |
 |   1.18.1   | ![Latest release version badge for 1.18.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.18.1%2Fmaven-metadata.xml) |
