@@ -66,6 +66,4 @@ title: About
   font-style: italic;
   font-size: 0.8em;
 }
-
-@media (max-width)
 </style>
