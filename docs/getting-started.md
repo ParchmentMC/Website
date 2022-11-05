@@ -35,6 +35,7 @@ For convenience, the following is a table containing the version badges for the 
 | **1.17.1** | ![Latest release version badge for 1.17.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.17.1%2Fmaven-metadata.xml) |
 |    1.17    | ![Latest release version badge for 1.17.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.17%2Fmaven-metadata.xml) |
 | **1.16.5** | ![Latest release version badge for 1.16.5](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.16.5%2Fmaven-metadata.xml) |
+{:style="margin: auto"}
 
 When selecting the Parchment mappings version from the version badges above or in the README, please remove the `v` prefix before inserting it into your buildscript.
 
