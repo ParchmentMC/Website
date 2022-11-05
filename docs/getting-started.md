@@ -3,91 +3,127 @@ layout: page
 title: Getting Started
 ---
 
-## Choosing a version
+## 1. Choose a version {#choose-a-version}
 
-ParchmentMC provides three categories of exports for Parchment mappings, as detailed on [our site][exports-info]: **release** exports, **nightly** exports, and **bleeding edge** exports. The recommendation is to use release exports, which are represented as dated non-snapshot published artifacts on our Maven repository.
+Parchment mappings are provided in [three flavors][exports-info], but most users will only really need to use the _release_ exports.
 
-To find the latest version of the release or nightly exports for a particular supported Minecraft version, visit the README file of the branch for that Minecraft version and look at the version badges affixed to the top of the file. For example, Minecraft 1.17 (and all its minor versions) is located at the [`versions/1.17.x`][1.17-branch] branch.
-
-For convenience, the following is a table containing the version badges for the latest versions of the release exports. Note that the latest versions of the release exports for each Minecraft version are likely to coincide as they are regularly published on the same day.
+The latest version of the release export for a particular Minecraft version can be found in the version badges, which are present in the README of each branch on the repository (such as for the [1.17 branch][1.17-branch]). For convenience, the following table shows the latest versions of the most common Minecraft versions:
 
 | Minecraft Version | Mappings Version |
 |:-----------------:|:----------------:|
 | **1.19.2** | ![Latest release version badge for 1.19.2](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.19.2%2Fmaven-metadata.xml) |
 | **1.18.2** | ![Latest release version badge for 1.18.2](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.18.2%2Fmaven-metadata.xml) |
-|   1.18.1   | ![Latest release version badge for 1.18.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.18.1%2Fmaven-metadata.xml) |
 | **1.17.1** | ![Latest release version badge for 1.17.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.17.1%2Fmaven-metadata.xml) |
-|    1.17    | ![Latest release version badge for 1.17.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.17%2Fmaven-metadata.xml) |
 | **1.16.5** | ![Latest release version badge for 1.16.5](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.16.5%2Fmaven-metadata.xml) |
 {:style="margin: auto"}
 
 When selecting the Parchment mappings version from the version badges above or in the README, please remove the `v` prefix before inserting it into your buildscript.
 
-> If you are using Librarian on Forge and see unmapped names such as `m_1234_` or `f_1234_`, your Parchment mappings' Minecraft version differs from your environment's actual Minecraft version, and needs to be corrected to match. Alternatively, the section on [cross version mappings in Librarian's documentation][librarian_fg_cross_version_mappings] shows a solution for using mappings built for one Minecraft version on other Minecraft versions.
+## 2. Install the mappings {#install-the-mappings}
 
-## ForgeGradle
+Installing the mappings varies depending on the modding platform to be used. Here are simplified instructions for the most common modding platforms.
 
-The [**Librarian**][librarian] gradle plugin allows using Parchment mappings in a Minecraft Forge development environment.
-The plugin requires a ForgeGradle version of at least `5.1.20`, and a Gradle version of 7.1.1 or higher.
+### Forge and ForgeGradle
 
-For full step-by-step instructions with examples for how to apply the Librarian plugin and configure Parchment mappings.
-Please see the [relevant documentation][librarian_fg] in the plugin's repository.
+ParchmentMC provides the [**Librarian**][librarian] gradle plugin to allow the use of Parchment mappings in a Minecraft Forge development environment. The plugin requires a ForgeGradle version of at least **5.1.20**, and a Gradle version of **7.1.1** or higher.
 
-### Version string examples
+> For full installation instructions and documentation, consult the [relevant documentation][librarian_fg] in the plugin's repository. This page assumes you are using a 1.19 MDK with the new plugin DSL in use.
+{:.note}
+^
+> Users of the Librarian plugin will notice that all parameters are prefixed with `p`. Please consult [the FAQ][faq-param-prefix] for details.
+{:.note.orange-note}
 
-For using Parchment on the same version of Minecraft:
-: <code class="version"><u>YYYY</u>.<u>MM</u>.<u>DD</u>-<u>Minecraft version</u></code>
+---
 
-  > _Examples:_
-  >
-  > - `2021.12.12-1.17.1` for Minecraft 1.17.1
-  > - `2022.08.07-1.18.2` for Minecraft 1.18.2
-  > - `2022.08.14-1.19.2` for Minecraft 1.19.2
-  {:.note.icon.note-example}
+1. **Install the ParchmentMC maven repository** to your plugin repositories in the **`settings.gradle`** file.
 
-For using Parchment on a newer version with older mappings
-: <code class="version"><u>Mapping's MC version</u>-<u>YYYY</u>.<u>MM</u>.<u>DD</u>-<u>Environment MC version</u></code>
+    ```gradle
+    pluginManagement {
+        repositories {
+            maven { url = 'https://maven.parchmentmc.org' } // Add this line
+        }
+    }
+    ```
 
-  > _Examples:_
-  >
-  > - `1.17.1-2021.12.12-1.18` for Minecraft 1.17.1 mappings in an MC 1.18 environment
-  > - `1.18.2-2022.08.07-1.19.1` for Minecraft 1.18.2 mappings in an MC 1.19.1 environment
-  > - `1.19.2-2022.08.14-1.20` for Minecraft 1.19.2 mappings in an MC 1.20 environment
-  {:.note.icon.note-example}
+2. **Apply the Librarian plugin** in your buildscript (`build.gradle`). This must be **below** the ForgeGradle plugin.
 
-Confused as to why all the parameters are prefixed with `p`? See [the FAQ for details][faq-param-prefix].
+    ```gradle
+    plugins {
+        // This should be below the net.minecraftforge.gradle plugin
+        id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    }
+    ```
 
-## Fabric Loom
+3. **Update your mappings channel and version** to the `parchment` channel and the appropriate version string.
+
+    ```gradle
+    minecraft {
+        mappings channel: 'parchment', version: '2021.08.15-1.17.1'
+    }
+    ```
+
+    > For using Parchment on the same version of Minecraft:
+    > : <code class="version"><u>YYYY</u>.<u>MM</u>.<u>DD</u>-<u>Minecraft version</u></code>
+    >
+    > > _Examples:_
+    > >
+    > > - **`2021.12.12-1.17.1`** for Minecraft 1.17.1
+    > > - **`2022.08.07-1.18.2`** for Minecraft 1.18.2
+    > > - **`2022.08.14-1.19.2`** for Minecraft 1.19.2
+    > {:.note.icon.note-example}
+    >
+    > For using Parchment for an older version on a newer MC version
+    > : <code class="version"><u>Mapping's MC version</u>-<u>YYYY</u>.<u>MM</u>.<u>DD</u>-<u>Environment MC version</u></code>
+    >
+    > > _Examples:_
+    > >
+    > > - **`1.17.1-2021.12.12-1.18`**
+    > >   - Minecraft _1.17.1_ mappings (`2021.12.12-1.17.1`) in an MC _1.18_ environment
+    > > - **`1.18.2-2022.08.07-1.19.1`**
+    > >   - Minecraft _1.18.2_ mappings (`2021.08.07-1.18.2`) in an MC _1.19.1_ environment
+    > > - **`1.19.2-2022.08.14-1.20`**
+    > >   - Minecraft _1.19.2_ mappings (`2021.08.14-1.19.2`) in an MC _1.20_ environment
+    > {:.note.icon.note-example}
+    {:.note.yellow-note}
+
+### Fabric and Fabric Loom
 
 [**Fabric Loom**][fabric-loom] provides native support for Parchment mappings as of version 0.9.
 
-To use Parchment mappings, add the ParchmentMC repository (`https://maven.parchmentmc.org`) to your buildscript, then configure your buildscript to use a `layered` mapping dependency with Parchment mappings and Official mappings, as seen in the following:
+1. **Install the Parchment repository** in your buildscript's `repositories` block.
 
-```gradle
-repositories {
-  maven {
-    name = 'ParchmentMC'
-    url = 'https://maven.parchmentmc.org'
-  }
-}
+    ```gradle
+    repositories {
+        maven {
+            name = 'ParchmentMC'
+            url = 'https://maven.parchmentmc.org'
+        }
+    }
+    ```
 
-dependencies {
-  // ...
-  mappings loom.layered() {
-    officialMojangMappings()
-    parchment("org.parchmentmc.data:parchment-1.17.1:2021.09.05@zip")
-  }
-}
-```
+2. **Use the `loom.layered()` mappings dependency** with Parchment mappings and official/Mojang mappings.
 
-After applying these changes or updating to a new mappings export version, run the `genSources` Gradle task to (re)generate the Minecraft sources JAR with the documentation and parameters. If your IDE fails to auto-detect the sources JAR when browsing Minecraft classes, manually select the JAR file ending with `-sources.jar` when prompted by your IDE.
+    ```gradle
+    dependencies {
+    // ...
+    mappings loom.layered() {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-1.17.1:2021.09.05@zip")
+    }
+    }
+    ```
+
+    > The dependency should be formatted as follows:
+    > <code class="version">org.parchmentmc.data:parchment-<u>Minecraft version</u>:<u>YYYY</u>.<u>MM</u>.<u>DD</u>@zip</code>
+    {:.note.yellow-note}
+
+3. _(Optional)_ Run the `genSources` task to (re)generate the Minecraft sources JAR. If your IDE fails to auto-detect the sources JAR when browsing Minecraft classes, manually select the JAR file ending with `-sources.jar` when prompted by your IDE.
 
 [1.17-branch]: https://github.com/ParchmentMC/Parchment/tree/versions/1.17.x
 [exports-info]: /docs/maven#parchment-exports
 [librarian]: https://github.com/ParchmentMC/Librarian
 [faq-param-prefix]: faq#why-are-my-parameter-names-prefixed-with-p
 [librarian_fg]: https://github.com/ParchmentMC/Librarian/blob/dev/docs/FORGEGRADLE.md
-[librarian_fg_cross_version_mappings]: https://github.com/ParchmentMC/Librarian/blob/dev/docs/FORGEGRADLE.md#cross-version-mappings
 [fabric-loom]: https://github.com/FabricMC/fabric-loom
 
 <style>
@@ -102,6 +138,14 @@ After applying these changes or updating to a new mappings export version, run t
 
 .version u::after {
     content: ">";
+}
+
+.yellow-note {
+    background-color: rgba(247, 235, 90, 0.1);
+}
+
+.orange-note {
+    background-color: rgba(255, 95, 31, 0.1);
 }
 
 </style>
