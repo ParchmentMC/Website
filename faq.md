@@ -36,7 +36,7 @@ Although the members of the ParchmentMC team may have positions in the teams of 
 This is relevant for developers working with Minecraft Forge. Due to the requirement that the Minecraft code must be recompilable when remapped with parameter names, the [Librarian][librarian] plugin responsible for providing Parchment mappings uses the `checked` export. The `checked` export is specifically sanitized to:
 
 - Prefix all parameter names with `p` (for example, `block` becomes `pBlock`), to avoid conflicts between parameter names and local variable names; and
-- Remove all parameters for methods within anonymous classes, to avoid conflicts between local variables in upper scopes of the anonymous class.
+- Remove all parameters for lambda methods and methods within anonymous classes, to avoid conflicts between local variables in upper scopes of the anonymous class or method.
 
 In the future, we will seek towards finding solutions to allow usage of the regular Parchment mappings export through the Librarian plugin once we are able to determine all possible risks in regards to parameter name conflicts.
 
