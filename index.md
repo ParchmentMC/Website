@@ -79,5 +79,10 @@ Parchment is an open community-sourced modloader-neutral set of mappings of _par
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
+
+    .intro-header .page-heading h1 {
+        margin-top: 0;
+        font-size: 2.5em;
+    }
 }
 </style>
