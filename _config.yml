@@ -4,7 +4,7 @@ theme: beautiful-jekyll-theme
 title: ParchmentMC
 author: The ParchmentMC Team
 baseurl: "" # the subpath of your site, e.g. /blog
-url: ""
+url: "https://parchmentmc.org"
 
 navbar-links:
   Getting Started: "docs/getting-started"
