@@ -79,6 +79,7 @@ ParchmentMC provides the [**Librarian**](https://github.com/ParchmentMC/Libraria
     > > - **`2021.12.12-1.17.1`** for Minecraft 1.17.1
     > > - **`2022.08.07-1.18.2`** for Minecraft 1.18.2
     > > - **`2022.08.14-1.19.2`** for Minecraft 1.19.2
+    > > {:.example-list}
     > {:.note.icon.note-example}
     >
     > For using Parchment for an older version on a newer MC version
@@ -92,6 +93,7 @@ ParchmentMC provides the [**Librarian**](https://github.com/ParchmentMC/Libraria
     > >   - Minecraft _1.18.2_ mappings (`2021.08.07-1.18.2`) in an MC _1.19.1_ environment
     > > - **`1.19.2-2022.08.14-1.20`**
     > >   - Minecraft _1.19.2_ mappings (`2021.08.14-1.19.2`) in an MC _1.20_ environment
+    > > {:.example-list}
     > {:.note.icon.note-example}
     {:.note.yellow-note}
 
@@ -165,6 +167,15 @@ ParchmentMC provides the [**Librarian**](https://github.com/ParchmentMC/Libraria
 
 .orange-note {
     background-color: rgba(255, 95, 31, 0.1);
+}
+
+.note-example ul {
+    padding-left: 1.5rem;
+}
+
+.note-example > ul {
+    padding-left: 0rem;
+    margin-left: -0.55rem;
 }
 
 </style>

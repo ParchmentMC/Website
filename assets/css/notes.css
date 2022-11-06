@@ -16,6 +16,14 @@ Example usage:
     margin: 0.75rem 1.25rem;
 }
 
+@media (max-width: 719px) {
+    /* On horizontally narrow screens, reduce the margin and padding */
+    .note {
+        padding: 0.75rem 1rem;
+        margin: 0.5rem 0;
+    }
+}
+
 .note > p:last-child { /* Remove margin if last tag is a paragraph */
     margin-bottom: 0;
 }
