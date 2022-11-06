@@ -3,7 +3,8 @@ layout: page
 title: Frequently Asked Questions
 ---
 
-## What is Parchment/ParchmentMC?
+<!-- A manual word break fixes this from stretching and causing horizontal overflow on small screens -->
+## What is Parchment<wbr>/ParchmentMC?
 
 ParchmentMC is a community project to provide a cohesive set of mappings of parameter names and javadocs -- the **Parchment** mappings set -- to augment the official names released by Mojang.
 
