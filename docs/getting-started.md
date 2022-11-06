@@ -39,7 +39,7 @@ ParchmentMC provides the [**Librarian**](https://github.com/ParchmentMC/Libraria
 > For full installation instructions and documentation, consult the [relevant documentation](https://github.com/ParchmentMC/Librarian/blob/dev/docs/FORGEGRADLE.md) in the plugin's repository. This page assumes you are using a 1.19 MDK with the new plugin DSL in use.
 {:.note}
 ^
-> Users of the Librarian plugin will notice that all parameters are prefixed with `p`. Please consult [the FAQ](/docs/faq#why-are-my-parameter-names-prefixed-with-p) for details.
+> Users of the Librarian plugin will notice that all parameters are prefixed with `p`. Please consult [the FAQ](/faq#why-are-my-parameter-names-prefixed-with-p) for details.
 {:.note.orange-note}
 
 ---
