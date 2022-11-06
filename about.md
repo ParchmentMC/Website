@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: About
 ---
 
@@ -7,13 +7,26 @@ title: About
 
 ## The Team
 
+<div class="team-container">
+{% for team_member in site.team_members %}
+  <div class="member">
+    {% capture avatar %}https://github.com/{{ team_member.github }}.png{% endcapture %}
+    {% if team_member.avatar %} {% assign avatar = team_member.avatar %} {% endif %}
+    <img class="avatar" src="{{ avatar }}">
+    <div class="name">
+    {% if team_member.github %} <a href="https://github.com/{{ team_member.github }}"> {% endif %}
+    {{ team_member.name }}
+    {% if team_member.github %} </a> {% endif %}
+    </div>
+    <div class="role">{{ team_member.role }}</div>
+    <div class="teams">{{ team_member.teams }}</div>
+  </div>
+{% endfor %}
+</div>
+
 <style>
 .team-container {
   margin: 1em auto;
-  /* display: grid; */
-  /* grid-template-columns: repeat(4, 1fr); */
-  /* column-gap: 1em; */
-  /* row-gap: 1em; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -53,23 +66,4 @@ title: About
   font-style: italic;
   font-size: 0.8em;
 }
-
-@media (max-width)
 </style>
-
-<div class="team-container">
-{% for team_member in site.team_members %}
-  <div class="member">
-    {% capture avatar %}https://github.com/{{ team_member.github }}.png{% endcapture %}
-    {% if team_member.avatar %} {% assign avatar = team_member.avatar %} {% endif %}
-    <img class="avatar" src="{{ avatar }}">
-    <div class="name">
-    {% if team_member.github %} <a href="https://github.com/{{ team_member.github }}"> {% endif %}
-    {{ team_member.name }}
-    {% if team_member.github %} </a> {% endif %}
-    </div>
-    <div class="role">{{ team_member.role }}</div>
-    <div class="teams">{{ team_member.teams }}</div>
-  </div>
-{% endfor %}
-</div>

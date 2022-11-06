@@ -1,53 +1,109 @@
+
+theme: beautiful-jekyll-theme
+
 title: ParchmentMC
-email: website@parchmentmc.org
-description: >- # this means to ignore newlines until "baseurl:"
-  Open community-sourced parameter names and javadocs
-baseurl: "" # the subpath of your site, e.g. /blog
-url: ""
-twitter_username: mc_parchment
-github_username:  ParchmentMC
-author:
-  name: ParchmentMC
+author: The ParchmentMC Team
 
-# Build settings
-theme: jekyll-yamt
+navbar-links:
+  Getting Started: "docs/getting-started"
+  Documentation:
+    - Mapping Standards: "docs/mappings"
+    - Maven Repository and Artifacts: "docs/maven"
+    - Review Process: "docs/review"
+    - Version Policy: "docs/versions"
+  FAQ: "faq"
+  Discord: https://discord.parchmentmc.org/
+  About: "about"
 
-#Plugins
-plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap, jekyll-redirect-from, jekyll-mentions]
+avatar: "/assets/img/logo.png"
+round-avatar: false
 
-#Pagination
-paginate: 3
-paginate_path: "/page:num/"
+# If you want to have an image logo in the top-left corner instead of having the title of the website
+#title-img: /path/to/image
 
-#SEO
-twitter:
-  username: ParchmentMC
-  card: summary
-logo: /assets/img/logo.png
-social:
-  links: #List your social links here
-    - https://twitter.com/ParchmentMC
-    - https://www.github.com/ParchmentMC
-lang: en_US
+social-network-links:
+  email: "website@parchmentmc.org"
+  rss: true
+  github: ParchmentMC
+  twitter: ParchmentMC
 
-#Highlighter
+rss-description: Open community-sourced parameter names and javadocs
+
+excerpt_length: 50
+feed_show_excerpt: false
+feed_show_tags: true
+post_search: false
+navbar-var-length: false
+# The keywords to associate with your website, for SEO purposes
+#keywords: "my,list,of,keywords"
+
+# Colour values can be any valid CSS colour
+navbar-col: "#FFE4B9"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FCFCFC"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#FCFCFC"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+
+# Alternatively, the navbar, footer, and page background can be set to an image
+#navbar-img: "/assets/img/bgimage.png"
+#footer-img: "/assets/img/bgimage.png"
+#page-img: "/assets/img/bgimage.png"
+
+# Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
+#mobile-theme-col: "#0085A1"
+
+site-css:
+  - "/assets/css/notes.css"
+  - "/assets/css/tabs.css"
+site-js:
+  - "/assets/js/tabs.js"
+
+# Ruby Date Format to show dates of posts
+date_format: "%B %-d, %Y"
+
+timezone: "Etc/UTC"
+markdown: kramdown
+highlighter: rouge
+#paginate: 5 # Do not paginate, since that requires index.html but we use an index.md
+
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
 
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      nav-short: true
+  -
+    scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+      nav-short: true
 
-#Sass
-sass:
-  style: compressed
-  sourcemap: never
+# Exclude these files from production site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-mentions
+  - jekyll-tabs
 
 # Collections
 collections:
- - team_members # ParchmentMC team members
+  - team_members # ParchmentMC team members

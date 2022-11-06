@@ -1,0 +1,50 @@
+/* Copied from https://github.com/Ovski4/jekyll-tabs/blob/37ec6312890049c9bcdb07302d2a38178564fa8f/docs/tabs.css with modifications */
+
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.tab > * {
+    flex: none;
+}
+
+.tab > * > a {
+    display: block;
+    text-align: center;
+    padding: 9px 20px;
+    color: #999;
+    border-bottom: 2px solid transparent;
+    border-bottom-color: rgba(128, 128, 128, 0.2);
+    transition: color .1s ease-in-out;
+    line-height: 1.5em;
+    font-size: 0.9em;
+    font-weight: 800;
+}
+
+.tab > .active > a {
+    color: #222;
+    border-color: #1e87f0;
+}
+
+.tab > li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The tab content container has no margin or padding, and is only visible when the 'active' class is applied. */
+.tab-content {
+    margin: 0;
+    padding: 0;
+}
+
+.tab-content > li {
+    display: none;
+}
+
+.tab-content > li.active {
+    display: initial;
+}

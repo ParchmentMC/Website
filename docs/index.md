@@ -1,11 +1,4 @@
 ---
 layout: page
-title: "Documentation"
+redirect_to: /
 ---
-
-# Documentation
-
- * [Mapping Standards](mappings.html)
- * [Maven Repository and Artifacts](maven.html)
- * [Review Process](review.html)
- * [Version Policy](versions.html)
