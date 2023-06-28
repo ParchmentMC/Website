@@ -11,6 +11,8 @@ The latest version of the release export for a particular Minecraft version can 
 
 | Minecraft Version | Mappings Version |
 |:-----------------:|:----------------:|
+| **1.20.1** | ![Latest release version badge for 1.20.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.20.1%2Fmaven-metadata.xml) |
+| **1.19.4** | ![Latest release version badge for 1.19.4](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.19.4%2Fmaven-metadata.xml) |
 | **1.19.3** | ![Latest release version badge for 1.19.3](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.19.3%2Fmaven-metadata.xml) |
 |   1.19.2   | ![Latest release version badge for 1.19.2](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.19.2%2Fmaven-metadata.xml) |
 | **1.18.2** | ![Latest release version badge for 1.18.2](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.18.2%2Fmaven-metadata.xml) |
@@ -68,7 +70,7 @@ ParchmentMC provides the [**Librarian**](https://github.com/ParchmentMC/Libraria
 
     ```gradle
     minecraft {
-        mappings channel: 'parchment', version: '2021.08.15-1.17.1'
+        mappings channel: 'parchment', version: '2023.06.26-1.20.1'
     }
     ```
 
@@ -124,7 +126,7 @@ ParchmentMC provides the [**Librarian**](https://github.com/ParchmentMC/Libraria
         // ...
         mappings loom.layered() {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-1.17.1:2021.09.05@zip")
+            parchment("org.parchmentmc.data:parchment-1.20.1:2023.06.26@zip")
         }
     }
     ```
