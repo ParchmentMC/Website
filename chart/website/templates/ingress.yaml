@@ -19,11 +19,11 @@ metadata:
   {{- end }}
 spec:
   tls:
-    {{- range .Values.ingress.hosts }}
     - hosts:
+      {{- range .Values.ingress.hosts }}
         - {{ . | quote }}
+      {{- end }}
       secretName: "parchment-website-tls"
-    {{- end }}
   rules:
     {{- range .Values.ingress.hosts }}
     - host: {{ . | quote }}
