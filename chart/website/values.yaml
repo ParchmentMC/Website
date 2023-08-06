@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: container.ldtteam.com/ldtteam/minecolonies/wiki
+  repository: container.ldtteam.com/parchmentmc/website
   pullPolicy: Always
   tag: latest
 
