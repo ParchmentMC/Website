@@ -11,6 +11,7 @@ The latest version of the release export for a particular Minecraft version can 
 
 | Minecraft Version | Mappings Version |
 |:-----------------:|:----------------:|
+| **1.20.3** | ![Latest release version badge for 1.20.3](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.20.3%2Fmaven-metadata.xml)
 | **1.20.2** | ![Latest release version badge for 1.20.2](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.20.2%2Fmaven-metadata.xml) |
 | **1.20.1** | ![Latest release version badge for 1.20.1](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.20.1%2Fmaven-metadata.xml) |
 | **1.19.4** | ![Latest release version badge for 1.19.4](https://img.shields.io/maven-metadata/v?color=forestgreen&label=release&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-internal%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.19.4%2Fmaven-metadata.xml) |
