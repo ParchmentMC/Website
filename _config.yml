@@ -24,7 +24,7 @@ round-avatar: false
 #title-img: /path/to/image
 
 social-network-links:
-  email: "website@parchmentmc.org"
+  email: "admin@parchmentmc.org"
   rss: true
   github: ParchmentMC
   twitter: mc_parchment
