@@ -35,7 +35,7 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Custom gems
 gem "webrick", "~> 1.7"
-gem "beautiful-jekyll-theme", "5.0.0"
+gem "beautiful-jekyll-theme", "6.0.1"
 
 # Fix eventmachine on Windows (https://stackoverflow.com/a/65547010/14416954)
 gem "eventmachine", "1.2.7", git: "https://github.com/eventmachine/eventmachine.git", tag: "v1.2.7"
