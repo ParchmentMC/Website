@@ -18,7 +18,7 @@ group :jekyll_plugins do
     gem "jekyll-seo-tag"
     gem "jekyll-sitemap"
     gem "jekyll-redirect-from"
-    gem "jekyll-mentions", "1.5.1"
+    gem "jekyll-mentions"
     gem "jekyll-watch"
     gem "jekyll-tabs"
 end
