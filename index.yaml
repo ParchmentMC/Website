@@ -3,6 +3,16 @@ entries:
   website:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-11-13T11:36:02.87123248Z"
+    description: A Helm chart for Kubernetes
+    digest: 1457375f03896bd8d74ec5723550ec29dfa13b4f21d8886b9cfa695c74c0179f
+    name: website
+    type: application
+    urls:
+    - https://github.com/ParchmentMC/Website/releases/download/website-v0.0.2/website-v0.0.2.tgz
+    version: v0.0.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-11-13T11:29:10.831652449Z"
     description: A Helm chart for Kubernetes
     digest: c8dd69beac478185ba655e01477292fe4eef20227701e74dfcaf6dc0029853b0
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/ParchmentMC/Website/releases/download/website-v0.0.1/website-v0.0.1.tgz
     version: v0.0.1
-generated: "2024-11-13T11:29:10.831663019Z"
+generated: "2024-11-13T11:36:02.871245254Z"
