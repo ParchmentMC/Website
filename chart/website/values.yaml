@@ -20,6 +20,8 @@ ingress:
   hosts:
     - parchmentmc.org
     - parchmentmc.net
+    - www.parchmentmc.org
+    - www.parchmentmc.net
 
 service:
   type: ClusterIP
